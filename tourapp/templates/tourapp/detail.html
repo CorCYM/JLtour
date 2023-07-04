@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 도시 상세페이지 :::</title>
+    <script type="text/javascript">
+        function goList(){
+            location.href = "/tour/index/"
+        }
+    </script>
+</head>
+<body>
+    <h3> 도시 정보 상세페이지</h3>
+    <hr/>
+    <table border="1">
+        <tr>
+            <th>도시이름</th>
+            <th>명승지 주소</th>
+            <th>명승지</th>
+            <th>대표음식</th>
+        </tr>
+        {% for detail in detail_list %}
+        <tr>
+            <td>{{ detail.location }}</td>
+            <td>{{ detail.address }}</td>
+            <td>{{ detail.attraction }}</td>
+            <td>{{ detail.food }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr/>
+
+    <input type="button" 
+                onclick="goList()" value="목록가기">
+
+</body>
+</html>

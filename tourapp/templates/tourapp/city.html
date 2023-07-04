@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 도시 목록 :::</title>
+    <script></script>
+</head>
+<body>
+    <h3>전라도 시군 조회하기</h3>
+    <hr/>
+    <table border="1">
+        <tr>
+            <th>도시 이름</th>
+            <th>도시 번호</th>
+        </tr>
+        {% for lo in city_list %}
+        <tr>
+            <td>{{ lo.location }}</td>
+            <td>{{ lo.citynumber }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

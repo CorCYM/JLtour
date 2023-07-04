@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>관광청 바로가기</title>
+
+
+
+	<style>
+
+
+		.logo {
+			float: left;
+		  }
+/*#############################메뉴css###############################*/
+		.menu {
+			height: 150px;
+			display: flex;
+			align-items: center;
+			float: left;
+		  }
+	  
+		  .menu ul {
+			width: 800px;
+			margin: 0 auto;
+			overflow: hidden;
+		  }
+	  
+		  .menu ul li a:hover {
+			box-sizing: border-box;
+	  
+			border: solid #7c7b7b 5px;
+			padding: 5px;
+			border-top: 0px;
+			border-left: 0px;
+			border-right: 0px;
+		  }
+	  
+		  .menu ul li {
+			float: left;
+			width: 25%;
+			height: 100%;
+			line-height: 50px;
+			text-align: center;
+			list-style: none;
+		  }
+	  
+		  .menu ul li a {
+			color: white;
+			text-decoration: none;
+			text-shadow: 5px 5px 5px rgb(223, 9, 9);
+			font-size: 22px;
+		  }
+
+		/*############################################################*/
+
+
+        .div_style{           
+            text-align: center;
+            float:left;
+            padding: 20px;
+			margin: 10px;
+			background-color: rgb(255,255,255,0.7);
+			border-radius: 10px;	
+			display: flex;	
+			height: 100px;
+			width: 440px;
+        }
+
+		.city1{
+
+			color: #000000;
+			text-align: center;
+			height: 50px;
+			width: 100px;
+            margin: auto;
+			font-size: 20px;
+            border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.city2{
+            
+			color: #000000;
+			text-align: center;
+			height: 50px;
+			width: 100px;
+            margin: auto;
+			font-size: 20px;
+            border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.city-body{
+			text-align: center;
+			height: 80px;
+			width: 300px;
+			text-align: center;
+			padding-top: 20px;
+		}
+
+		dt { 
+			float: left; 
+			font-weight: 900;
+		}
+		h3 { 
+			
+			float: inline-start;
+		}
+		
+
+		html{
+            height: 100vh;
+            background-image: url("{% static 'tourapp/images/gj.jpg' %}");
+            background-repeat : no-repeat;
+            background-size : cover ;
+            width: 100%;
+            height: 100%;
+			background-attachment: fixed;
+        }
+
+		.section {
+            height: 1000px;
+        }
+
+		
+		
+		
+    </style>
+
+</head>
+
+<body>
+	
+	<div class="intro_container" >
+        
+	<div>
+	<div class="logo">
+		<a href="/tour/index/"><img src="{% static 'tourapp/images/logo.png' %}" alt="로고" height="150px" width="250px" style="float: left;"></a>
+	</div>	
+
+		<div class="menu">
+			<ul>
+				<li><a href="/tour/testing/">여행지 추천받기</a></li>
+				<li><a href="/tour/jltour2/">관광청 바로가기</a></li>
+				<li><a href="/tour/calendar/">축제 일정</a></li>
+				<li><a href="/tour/profile/">팀 소개페이지</a></li>
+			</ul>
+		</div>
+	<!-- <input type="button" 
+	style="text-align: center"
+	onclick="goBack()" 
+	value="돌아가기"> -->
+	<!-- <br/>
+	<h1 style="text-align: center; color: #F0FFF0;">전라북도</h1>
+	<br/> -->
+	<section class='section' id='section1'>
+		<div><h1 style="text-align: center; clear:both; color: #F0FFF0;" >　　　　　　전라북도 	
+		
+			<button id='button1' style="color:rgb(225,225,225); background-color:rgb(0,0,0,0.3); float:center; font-size:20px; padding:5px 3px; border-radius: 10px; float:right;">　전라남도∨　</button>
+		</h1></div>
+	
+	<div class="flex">			
+		<div class = "div_style">
+			<div class="city1">
+				<h3>김제시</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>				
+					<a href="https://www.gimje.go.kr/index.gimje?tab=03" target="_blank">관광청바로가기</a>
+				</dd>
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-540-3114">063-540-3114</a>
+				</dd>
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 김제시 중앙로 40</a>			
+				</dd>
+			</div>
+		</div>
+		
+		
+		<div class = "div_style">
+			<div class="city1">	
+				<h3>군산시</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.gunsan.go.kr/tour" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-454-4000">063-454-4000</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 군산시 시청로 17</a>			
+				</dd>
+			</div>		
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">
+				<h3>남원시</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.namwon.go.kr/tour/index.do" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-620-6114">063-620-6114</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 남원시 시청로 60</a>			
+				</dd>
+			</div>
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">		
+				<h3>익산시</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.iksan.go.kr/tour/index.iksan" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:1577-0072">1577-0072</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 익산시 인북로32길 1</a>			
+				</dd>
+			</div>
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">		
+			<h3>전주시</h3>
+			</div>
+				<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://tour.jeonju.go.kr/index.jeonju#content" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-222-1000">063-222-1000</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 전주시 완산구 노송광장로 10</a>			
+				</dd>
+			</div>
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">
+			
+			<h3>정읍시</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.jeongeup.go.kr/culture/index.jeongeup" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-539-7114">063-539-7114</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 정읍시 충정로 234</a>			
+				</dd>
+			</div>
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">
+			
+			<h3>고창군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.gochang.go.kr/tour/index.gochang" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-560-2957">063-560-2957</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 고창군 고창읍 중앙로 245</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">
+			
+			<h3>무주군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://tour.muju.go.kr/tour/index.do" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel: 063-320-2570"> 063-320-2570</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 무주군 무주읍 주계로 97</a>			
+				</dd>
+			</div>
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">
+			
+			<h3>부안군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.buan.go.kr/tour/index.buan" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-580-4449">063-580-4449</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 부안군 부안읍 당산로 91</a>			
+				</dd>
+			</div>
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">
+			
+			<h3>순창군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.sunchang.go.kr/tour/index.sunchang" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-650-1648">063-650-1648</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 순창군 순창읍 경천로 33</a>			
+				</dd>
+			</div>
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">
+			
+			<h3>완주군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.wanju.go.kr/tour/index.wanju" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-290-3991">063-290-3991</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 완주군 용진읍 지암로 61</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">
+			
+			<h3>임실군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.imsil.go.kr/tour/index.imsil#content" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-640-2344">063-640-2344</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 임실군 임실읍 수정로 30</a>			
+				</dd>
+			</div>
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">
+			
+			<h3>장수군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="http://www.jangsu.go.kr/tour/index.jangsu" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-350-2348">063-350-2348</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a>장수군 장수읍 호비로 10</a>			
+				</dd>
+			</div>
+		</div>
+		
+		<div class = "div_style">
+			<div class="city1">
+			
+			<h3>진안군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://jinan.go.kr/tour/" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:063-430-2114">063-430-2114</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 진안군 진안읍 중앙로 67</a>			
+				</dd>	
+			</div>	
+		</div>
+		
+	</section>
+	<!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+
+	
+	<section class='section' id = 'section2' style="clear:both;">
+	<h1 style="text-align: center;  color: #F0FFF0;" ><br/>전라남도 <div>
+		<button id='button2' style="color:rgb(225,225,225); background-color:rgb(0,0,0,0.3); float:center; font-size:20px; padding:5px 3px; border-radius: 10px; float:right;">　전라북도∧　</button>
+	</div></h1>
+	<br/>
+
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>목포시</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.mokpo.go.kr/tour" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-272-2171">061-272-2171</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 목포시 양을로 203</a>			
+				</dd>	
+			</div>		
+		</div>
+		
+
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>여수시</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.yeosu.go.kr/tour" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:1899-2012">1899-2012</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 여수시
+					시청로 1</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>순천시</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.suncheon.go.kr/tour/" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-749-3114">061-749-3114</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 순천시 장명로 30</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>나주시</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.naju.go.kr/tour" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-339-8721">061-339-8721</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 나주시 시청길 22</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>광양시</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://gwangyang.go.kr/tour/" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-797-2114">061-797-2114</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a>광양시 시청로 33</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>담양군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.damyang.go.kr/tour/index.damyang" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-380-3114">061-380-3114</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 담양군 담양읍 추성로 1371</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>곡성군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.gokseong.go.kr/tour/#none" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-363-2011">061-363-2011</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 곡성군 곡성읍 군청로 50</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>구례군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.gurye.go.kr/tour/main.do" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-782-2014">061-782-2014</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a>구례군 구례읍 봉성로 1</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>고흥군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="http://tour.goheung.go.kr/tour/index.do" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-830-5244">061-830-5244</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 고흥군 고흥읍 고흥군청로 1</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>보성군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.boseong.go.kr/tour#none" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-852-2181">061-852-2181</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 보성군 보성읍 송재로 165</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>화순군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.hwasun.go.kr/index.do?S=S09" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-374-0001">061-374-0001</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 화순군 화순읍 동헌길 23</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>장흥군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.jangheung.go.kr/tour" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-863-7071">061-863-7071</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 장흥군 장흥읍 장흥로 21</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>강진군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.gangjin.go.kr/culture" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-430-3114">061-430-3114</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 강진군 강진읍 탐진로 111</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>해남군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.haenam.go.kr/tour/index.9is?contentUid=18e3368f655bdbc60166192794d9237d" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-530-5917">061-530-5917</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 해남군 해남읍 군청길 4</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>영암군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.yeongam.go.kr/home/tour" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-470-2114">061-470-2114</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 영암군 영암읍 군청로 1</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>무안군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://tour.muan.go.kr/" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-450-5474">061-450-5474</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 무안군 무안읍 무안로 530</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>함평군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.hampyeong.go.kr/tour/" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-320-2205">061-320-2205</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 함평군 함평읍 곤재로 27</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>영광군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://tour.yeonggwang.go.kr/" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel: 061-350-5114"> 061-350-5114</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 영광군 영광읍 중앙로 203</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>장성군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.jangseong.go.kr/home/tour_new" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-390-7241">061-390-7241</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 장성군 장성읍 영천로 200</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>완도군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.wando.go.kr/tour/" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-550-5114">061-550-5114</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a> 완도읍 청해진남로 51</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>진도군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.jindo.go.kr/tour/main.cs" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-544-2181">061-544-2181</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a>  진도군 진도읍 철마길 25</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>신안군</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://tour.shinan.go.kr/" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:061-271-1004">061-271-1004</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a>신안군 압해읍 천사로 1004</a>			
+				</dd>
+			</div>	
+		</div>
+		
+		<div class = "div_style">
+			<div class="city2">	
+			
+			<h3>광주광역시</h3>
+			</div>
+			<div class="city-body">
+				<dt>홈페이지: </dt>
+				<dd>
+								
+					<a href="https://www.gwangju.go.kr/culture/" target="_blank">관광청바로가기</a>
+				</dd>
+				
+				<dt>대표전화: </dt>
+				<dd>
+					<a href="tel:062-120">062-120</a>
+					
+				</dd>
+				
+				<dt>상세주소: </dt>
+				<dd>
+					<a>광주광역시 서구 내방로 111</a>			
+				</dd>
+			</div>	
+		</div>
+		</section>
+	</div>
+
+
+
+
+</body>
+
+<script>
+    const button1 = document.getElementById('button1');
+    const section1 = document.getElementById('section1');
+    
+    const button2 = document.getElementById('button2');
+    const section2 = document.getElementById('section2');
+
+    button1.addEventListener('click', () => {
+        section2.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    button2.addEventListener('click', () => {
+        section1.scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+</html>

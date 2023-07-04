@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 주문정보 조회 페이지 :::</title>
+    <script type="text/javascript">
+        function goList(){
+            location.href = "/tour/index/"
+        }
+    </script>
+</head>
+<body>
+    <h3>선택 도시 정보 테이블</h3>
+    <hr/>
+    <table border="1">
+        <tr>
+            <th>도시이름</th>
+            <th>주요명승지</th>
+            <th>명승지주소</th>
+            <th>대표음식</th>
+            <th>도시번호</th>
+            
+        </tr>
+        {% for de in citydetail %}
+        <tr>
+            <td>{{ de.location.location }}</td>
+            <td>{{ de.attraction }}</td>
+            <td>{{ de.address }}</td>
+            <td>{{ de.food }}</td>
+            <td>{{ de.location.citynumber }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr/>
+    <input type="button" style="width:60pt;height:60pt"
+                onclick="goList()" value="뒤로가기">
+    
+</body>
+</html>

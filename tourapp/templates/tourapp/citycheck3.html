@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 도시 정보 확인 :::</title>
+    <script type="text/javascript">
+        function goindex(){
+            location.href = "/tour/index/"
+        }
+    </script>
+</head>
+<body>
+    <h3>도시 정보 확인 상세페이지</h3>
+    <hr/>
+    <table border="1">
+        <th>도시이름</th>
+        <th>주요명승지</th>
+        <th>명승지주소</th>
+        <th>대표음식</th>
+        <th>도시번호</th>
+        </tr>
+        {{ sql }}
+        {% for i in citydetailcheck %}
+        <tr>
+            <td>{{ i.location.location }}</td>
+            <td>{{ i.attraction }}</td>
+            <td>{{ i.address }}</td>
+            <td>{{ i.food }}</td>
+            <td>{{ i.location.citynumber }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr/>
+    <input type="button" style="width:100pt;height:30pt"
+                onclick="goindex()" value="목록가기">
+
+</body>
+</html>

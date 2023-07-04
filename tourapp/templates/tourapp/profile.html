@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>프로필</title>
+        <!-- url 로고 -->
+        <link href="/Users/ha/Downloads/%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%85%E1%85%A7%E1%86%A8%E1%84%92%E1%85%A2%E1%84%8C%E1%85%AE%E1%84%89%E1%85%A6%E1%84%8B%E1%85%AD_-001.png" rel="shortcut icon" type="image/x-icon">
+        <!-- 폰트사용 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+    
+
+        <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Hi+Melody&display=swap');   
+        @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Gamja+Flower&family=Hi+Melody&display=swap'); 
+        @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Gamja+Flower&family=Hahmlet:wght@100;200;300;400&family=Hi+Melody&display=swap');
+
+        * {
+            margin: 0;
+            padding: 5px;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+        }
+
+        html{
+            height: 100vh;
+            background-image: url("{% static 'tourapp/images/back03.jpg' %}");
+            background-repeat : no-repeat;
+            background-size : cover ;
+            width: 100%;
+            height: auto;
+        }
+        .f{
+            background-color: rgb(0,0,0,0.4);
+            width: 100%;
+            height: auto;
+        }
+        
+        a{
+            text-decoration:none;
+            color:white
+        }
+        ul,li{
+            list-style: none;
+        }
+        .logo{
+            float: left;
+        }
+        .menu {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            float:left;
+        }
+        .menu ul{
+            width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .menu ul li {
+            float: left;
+            width: 25%;
+            height: 100%;
+            line-height: 50px;
+            text-align: center;
+        }
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            text-shadow: 5px 5px 5px rgb(223, 9, 9);
+            font-size: 22px;
+            text-shadow: 5px 5px 5px rgb(223, 9, 9); 
+        }
+        .menu ul li a:hover {
+            box-sizing: border-box;
+            border: solid #7c7b7b 5px;
+            padding: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+        }
+        .section{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .p1, .p2{
+            display : flex;
+            font-family:'Hahmlet', serif;
+        }
+        
+        .profile1, .profile2, .profile3, .profile4 ,.profile5{
+            margin: 10px;
+            width: 270px;
+            height: 370px;
+            border-radius :3%;
+            text-align: center;
+            float:left;
+            background-color: rgb(255,255,255,0.28);
+        }
+        .profile1 > img, .profile2 > img, .profile3 > img, .profile4 > img, .profile5 > img{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 200px;
+            height: 180px;
+            border-radius: 10%;
+        }
+        .name{
+            color:rgb(231, 231, 231);
+        }
+        .text{
+            color:rgb(231, 231, 231);
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+    </style>
+</head>
+<body>
+        <div class="logo">
+            <a href="/tour/index/"><img src="{% static 'tourapp/images/logo.png' %}" alt="로고" height="150px" width="250px" style="float: left;"></a>
+        </div>
+        <div class="menu">
+            <ul>
+            <li><a href="/tour/testing/">여행지 추천받기</a></li>
+            <li><a href="/tour/jltour2/">관광청 바로가기</a></li>
+            <li><a href="/tour/calendar/">축제 일정</a></li>
+            <li><a href="/tour/profile/">팀 소개페이지</a></li>
+            </ul>
+        </div>
+        
+    <div class="f">
+        <div class="section">
+            <h2 style="text-align: center; color:white; font-family:'Hahmlet', serif; clear:both;">TEAM MEMBER</h2>
+        </div>
+
+        <div class="p1">
+            <div class="profile1">
+                <img src="{% static 'tourapp/images/profile1.png' %}" alt="하승권">
+                <div class="profile-body">
+                    <h2 class="name">하승권</h2>
+                    <h5 style="color: white;">생명과학과</h5>
+                    <p class="text"> Frontend </p>
+                    <h5 style="color: #000000;">gktmdrnjs1@gmail.com</h5>
+                </div>
+            </div>
+            <div class="profile2">
+                <img src="{% static 'tourapp/images/profile2.png' %}" alt="김연화">
+                <div class="profile-body">
+                    <h2 class="name">김연화</h2>
+                    <h5 style="color: white;">중국어문화학과</h5>
+                    <p class="text"> DB </p>
+                    <h5 style="color: #000000;">kmynh0109@naver.com</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="p2">
+            <div class="profile3">
+                <img src="{% static 'tourapp/images/profile3.png' %}" alt="이준영">
+                <div class="profile-body">
+                    <h2 class="name">이준영</h2>
+                    <h5 style="color: white;">수학과</h5>
+                    <p class="text"> Frontend </p>
+                    <h5 style="color: #000000;">ljy980427@naver.com</h5>
+                </div>
+            </div>
+            <div class="profile4">
+                <img src="{% static 'tourapp/images/profile4.png' %}" alt="채영민">
+                <div class="profile-body">
+                    <h2 class="name">채영민</h2>
+                    <h5 style="color: white;">국어국문학과</h5>
+                    <p class="text"> DB , Backend</p>
+                    <h5 style="color: #000000;">gotica1113@gmail.com</h5>
+                </div>
+            </div>
+            <div class="profile5">
+                <img src="{% static 'tourapp/images/profile5.png' %}" alt="황진주">
+                <div class="profile-body">
+                    <h2 class="name">황진주</h2>
+                    <h5 style="color: white;">식품영양학과</h5>
+                    <p class="text"> Frontend </p>
+                    <h5 style="color: #000000;">hwangjj9642@gmail.com</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

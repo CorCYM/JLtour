@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 도시 정보 확인 :::</title>
+    <script type="text/javascript">
+        function goindex(){
+            location.href = "/tour/index/"
+        }
+    </script>
+</head>
+<body>
+    <h3>도시 정보 확인 상세페이지</h3>
+    <hr/>
+    <table border="1">
+        <th>도시이름</th>
+        <th>도시번호</th>
+
+        </tr>
+        <tr>
+            <td>{{ citycheck.location }}</td>
+            <td>{{ citycheck.citynumber }}</td>
+        </tr>
+    </table>
+    <hr/>
+    <input type="button" style="width:60pt;height:60pt"
+                onclick="goindex()" value="목록가기">
+
+</body>
+</html>

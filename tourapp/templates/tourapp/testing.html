@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>전라도 관광지 추천</title>
+    <!-- url 로고 -->
+    <link href="/Users/ha/Downloads/%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%85%E1%85%A7%E1%86%A8%E1%84%92%E1%85%A2%E1%84%8C%E1%85%AE%E1%84%89%E1%85%A6%E1%84%8B%E1%85%AD_-001.png" rel="shortcut icon" type="image/x-icon">
+    <!-- 폰트사용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+    
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Hi+Melody&display=swap');   
+    @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Gamja+Flower&family=Hi+Melody&display=swap'); 
+    @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Gamja+Flower&family=Hahmlet:wght@100;200;300;400&family=Hi+Melody&display=swap');
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+      }
+      main {
+        padding: 20px;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      header {
+        background-color: #44846e;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      ul,li{
+        list-style-type: none;
+      }
+      .logo {
+        float: left;
+      }
+  
+      .menu {
+        height: 150px;
+        display: flex;
+        align-items: center;
+        float: left;
+      }
+  
+      .menu ul {
+        width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+  
+      .menu ul li a:hover {
+        box-sizing: border-box;
+        border: solid #7c7b7b 5px;
+        padding: 5px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+      }
+  
+      .menu ul li {
+        float: left;
+        width: 25%;
+        height: 100%;
+        line-height: 50px;
+        text-align: center;
+      }
+  
+      .menu ul li a {
+        color: white;
+        text-decoration: none;
+        text-shadow: 5px 5px 5px rgb(223, 9, 9);
+        font-size: 22px;
+        text-shadow: 5px 5px 5px rgb(223, 9, 9); 
+      }
+
+
+      .section{
+        background-image: url("{% static 'tourapp/images/back_c.jpg' %}");
+        background-repeat : no-repeat;
+        background-size : cover ;
+        width: 100%;
+        height: 1000px;
+      }
+
+      .section1{
+        background-color: rgb(0,0,0,0.4);
+        width: 100%;
+        height: 730px;
+        padding: 20px;
+        text-align: center;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+      }
+      #section2{
+        padding: 20px;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .question {
+        font-family:'Hahmlet', serif;
+        margin-bottom: 20px;
+        text-align: left;
+        font-size: 20px;
+      }
+      .answer {
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 15px;
+        padding: 10px 20px;
+        background-color: #eee;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      .answer:hover {
+        background-color: #ddd;
+      }
+      .answer.selected {
+        background-color: #333;
+        color: white;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #333; 
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        float: none;
+      }
+      button:hover {
+        background-color: #4e6061;
+      }
+      #result{
+          font-size: 32px;
+          font-family: 'Hahmlet', serif;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="logo">
+        <a href="/tour/index/"><img src="{% static 'tourapp/images/logo.png' %}" alt="로고" height="150px" width="250px" style="float: left;"></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="/tour/testing/">여행지 추천받기</a></li>
+          <li><a href="/tour/jltour2/">관광청 바로가기</a></li>
+          <li><a href="/tour/calendar/">축제 일정</a></li>
+          <li><a href="/tour/profile/">팀 소개페이지</a></li>
+        </ul>
+      </div>
+      <!-- <header>
+        <h1>전라도 관광지 추천</h1>
+      </header> -->
+
+        <section class="section1" >
+          <p style="font-family:'Hahmlet', serif; color:white; font-size:48px; font-weight:700; clear:both;" class="h2"><br/><br/>여행을 계획중인 당신!<br>
+          선호하는 여행을 선택해주세요.</p><br><br>
+          <!-- <div class="start"><img src="choice2.png" alt="말풍선" height="400px" width="500px" > -->
+          <!-- </div> -->
+            <button id="button1" style="width: 350px;  text-align: center; padding: 10px; background-color: black; color: white; float: none; border:1px solid white;">↓↓ test start ↓↓</button>
+            <script>
+            var fixedDiv = document.getElementById("fixed-div");
+          
+            window.addEventListener("scroll", function() {
+              // 화면을 스크롤할 때 요소를 숨기는 코드
+              fixedDiv.style.display = "none";
+            });
+          </script>
+        </section>
+      </div>
+    </div>
+    
+      <section id="section2">
+        <div class="question">
+          <p>1. 바다와 산 중에 어느 곳으로 떠나고 싶으신가요?</p>
+          <div class="answer" data-score="0">바다로</div>
+          <div class="answer" data-score="1">산으로</div>
+        </div>
+        <div class="question">
+          <p>2. 밤과 낮 중에 언제 활동하는것을 좋아하시나요?</p>
+          <div class="answer" data-score="0">밤이 좋아요</div>
+          <div class="answer" data-score="1">낮이 좋아요</div>
+        </div>
+        <div class="question">
+          <p>3. 북적이는곳을 좋아하시나요? 고요한 곳을 좋아하시나요?</p>
+          <div class="answer" data-score="0">북적이는곳</div>
+          <div class="answer" data-score="1">고요한 곳</div>
+        </div>
+        <div class="question">
+          <p>4. 역사적인 곳과 현대적인 곳 중 어느 곳을 더 선호하시나요?</p>
+          <div class="answer" data-score="0">역사적인 장소</div>
+          <div class="answer" data-score="1">현대적인 장소</div>
+        </div>
+        
+        <div class="question">  
+          <p>5. 주로 연인과 함께 여행하나요?, 가족과 함께 여행하나요?</p>
+          <div class="answer" data-score="0">연인과 함께 </div>
+          <div class="answer" data-score="1">가족과 함게 </div>
+        </div>
+        <!-- <div class="question1">
+          <p>5. 자가용을 타고 이동하나요?, 대중교통을 타고 이동하나요?</p>
+          <div class="answer" data-score="0">자가용 타고 이동하기</div>
+          <div class="answer" data-score="1">대중교통 타고 이동하기</div>
+        </div>
+        <div class="question1">  
+          <p>7. 사람 많은 곳을 선호하나요?, 사람 없는 곳을 선호하나요?</p>
+          <div class="answer" data-score="0">사람 많은 곳</div>
+          <div class="answer" data-score="1">사람 없는 곳</div>
+        </div>
+        <div class="question1">  
+          <p>8. 사진 찍기 좋은 곳으로 여행하고 싶으신가요?</p>
+          <div class="answer" data-score="0">네</div>
+          <div class="answer" data-score="1">아니요</div>
+        </div> -->
+        </p>
+      </section>
+      <button id="submit-button" onclick="showResult()">결과 보기</button>
+          <div id="result"></div>
+          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+        <script type="text/javascript">
+          let totalScore = '';
+          const questionElements = document.querySelectorAll('.question'); // 모든 질문 요소를 가져옵니다.
+        
+        questionElements.forEach((questionElement) => {
+          const answerElements = questionElement.querySelectorAll('.answer'); // 각 질문의 답변 요소들을 가져옵니다.
+          const submitButton = document.getElementById('submit-button');
+          answerElements.forEach((answerElement) => {
+            answerElement.addEventListener('click', () => {
+              // 답변 요소가 클릭되면 실행될 함수를 작성합니다.
+              if (!answerElement.classList.contains('selected')) {
+                // 선택된 요소는 표시합니다.
+                answerElement.classList.add('selected');
+                // 선택되지 않은 다른 요소들은 선택 취소합니다.
+                answerElements.forEach((otherElement) => {
+                  if (otherElement !== answerElement) {
+                    otherElement.classList.remove('selected');
+                  }
+                });
+              
+              }
+            });
+          });
+        });
+
+function goback(){
+  url = "/tour/testing/"
+  location.href = url;
+};
+
+
+function goResult(){
+  //alert(totalScore);
+
+  url = "/tour/resulting/?";
+  url = url + "totalScore="+totalScore;
+  location.href = url;
+};
+
+function goback(){
+  url = "/tour/testing/"
+  location.href = url;
+};
+
+function showResult() {
+  const answerElements = document.querySelectorAll('.answer.selected'); // 선택된 답변 요소들을 가져옵니다.
+  
+  answerElements.forEach((answerElement) => {
+    totalScore += answerElement.getAttribute('data-score'); // 선택된 답변의 score 값을 더합니다.
+  });
+  const resultElement = document.getElementById('result');
+  
+  /*
+  resultElement.innerHTML = `<p id=reuslt><br/><br/><hr/><br/><br/><br/><br/>당신에게 추천하는 관광지는 
+    ${getRecommendation(totalScore)}입니다!</p>
+    <input type="button" onclick="goResult({{totalScore}})" value="도시정보">`; // 결과를 표시합니다.
+  */
+  totscore = getRecommendation(totalScore);
+  inner = "<p id=reuslt><br/><br/><hr/><br/><br/><br/><br/>당신에게 추천하는 관광지는 ";
+  inner += totscore + "입니다!</p>";
+  inner += "<input type='button' style='background:#000000; color:#fff; border:none; height:70px; font-size:1.4em; border-radius: 10px;' onclick='goResult()' value='도시정보'>";
+  resultElement.innerHTML = inner; // 결과를 표시합니다.
+  //alert(inner);
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+
+
+function getRecommendation(score) {
+  // score에 따라 추천하는 관광지를 반환하는 함수입니다. 
+  if (score =="00000") {
+    return '"여수"';
+  } else if (score =='00001') {
+    return '"완도"';
+  } else if (score =='00010') {
+    return '"목포"';
+  } else if (score =='00011') {
+    return '"부안"';
+  } else if (score =='00100') {
+    return '"진도"';
+  } else if (score =='00101') {
+    return '"영암"';
+  } else if (score =='00110') {
+    return '"군산"';
+  } else if (score =='00111') {
+    return '"해남"';
+  } else if (score =='01000') {
+    return '"순천"';
+  } else if (score =='01001') {
+    return '"보성"';
+  } else if (score =='01010') {
+    return '"함평"';
+  } else if (score =='01011') {
+    return '"부안"';
+  } else if (score =='01100') {
+    return '"고창"';
+  } else if (score =='01101') {
+    return '"강진"';
+  } else if (score =='01110') {
+    return '"장흥"';
+  } else if (score =='01111') {
+    return '"고흥"';
+  } else if (score =='10000') {
+    return '"전주"';
+  } else if (score =='10001') {
+    return '"익산"';
+  } else if (score =='10010') {
+    return '"광주"';
+  } else if (score =='10011') {
+    return '"담양"';
+  } else if (score =='10100') {
+    return '"장수"';
+  } else if (score =='10101') {
+    return '"김제"';
+  } else if (score =='10110') {
+    return '"장성"';
+  } else if (score =='10111') {
+    return '"무주"';
+  } else if (score =='11000') {
+    return '"남원"';
+  } else if (score =='11001') {
+    return '"나주"';
+  } else if (score =='11010') {
+    return '"순창"';
+  } else if (score =='11011') {
+    return '"곡성"';
+  } else if (score =='11100') {
+    return '"완주"';
+  } else if (score =='11101') {
+    return '"구례"';
+  } else if (score =='11110') {
+    return '"화순"';
+  } else if (score =='11111') {
+    return '"임실"';
+  } else { 
+    alert("모든 질문에 대한 선택을 해 주세요 ")
+    return goback();
+    
+}
+}  
+
+  </script>
+  
+  <script>
+    const button1 = document.getElementById('button1');
+    const section2 = document.getElementById('section2');
+  
+    button1.addEventListener('click', () => {
+        section2.scrollIntoView({ behavior: 'smooth' });
+    });
+  
+  </script>
+
+</body>
+</html>

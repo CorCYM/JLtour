@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>calendar</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- bootstrap 4 -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+        <!-- fullcalendar -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.min.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.min.js"></script>
+    
+    
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    timeZone: 'UTC',
+                    initialView: 'dayGridMonth', // 홈페이지에서 다른 형태의 view를 확인할  수 있다.
+                    events:[ // 일정 데이터 추가 , DB의 event를 가져오려면 JSON 형식으로 변환해 events에 넣어주면된다.
+                        {
+                            title:'함평나비축제',
+                            start:'2023-04-29',
+                            end:'2023-05-08'
+                            // color 값을 추가해 색상도 변경 가능 자세한 내용은 하단의 사이트 참조
+  
+                            },{
+                                title: '목포유달산봄축제',
+                                start: '2023-04-09',
+                                end: '2023-04-10',
+                                
+                            },{
+                                title: '곡성장미축제',
+                                start: '2023-05-22',
+                                end: '2023-06-06'
+                                
+                            },{
+                                title: '완도장보고수산물축제',
+                                start: '2023-05-05',
+                                end: '2023-05-08'
+                            },{
+                                title: '영광법성포단오제',
+                                start: '2023-06-02',
+                                end: '2023-06-05'
+                            },{
+                                title: '아이스멜론페스티벌',
+                                start: '2023-07-08',
+                                end: '2023-07-10'
+                            },{
+                                title: '정남진 장흥 물축제',
+                                start: '2023-07-30',
+                                end: '2023-08-07'
+                            },{
+                                title: '거문도백도은빛바다체험행사',
+                                start: '2023-08-12',
+                                end: '2023-08-14'
+                            },{
+                                title: '발표일',
+                                start: '2023-03-31',
+                                end: '2023-03-31'
+                            }
+                    
+                    ],
+                    editable: true, // false로 변경 시 draggable 작동 x 
+                    displayEventTime: false // 시간 표시 x
+                });
+                calendar.render();
+            });
+  
+        </script>
+        <style>
+            #calendarBox{
+                width: 75%;
+                padding-left: 20%;
+            }
+    
+        </style>
+    </head>
+    
+<body>
+        <div>
+            <a href="/tour/index/"><img src="{% static 'tourapp/images/logo.png' %}" alt="로고" height="150px" width="250px" style="float: left;"></a>
+        </div>
+        <br/><br/><br/><br/><br/>
+        <div id="calendarBox">
+            <div id="calendar"></div>
+        </div>
+    
+        <!-- modal 추가 -->
+        <div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">일정을 입력하세요.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="taskId" class="col-form-label">일정 내용</label>
+                            <input type="text" class="form-control" id="calendar_content" name="calendar_content">
+                            <label for="taskId" class="col-form-label">시작 날짜</label>
+                            <input type="date" class="form-control" id="calendar_start_date" name="calendar_start_date">
+                            <label for="taskId" class="col-form-label">종료 날짜</label>
+                            <input type="date" class="form-control" id="calendar_end_date" name="calendar_end_date">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" id="addCalendar">추가</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            id="sprintSettingModalClose">취소</button>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+   
+</body>
+</html>
